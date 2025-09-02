@@ -5,7 +5,7 @@ import { Brain, Cog, Users, Award, ExternalLink, Mail, Linkedin } from "lucide-r
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{ marginLeft: '1em' }}>
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
@@ -33,24 +33,21 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-3 gap-12 items-center">
+            <div className="space-y-8 lg:col-span-2">
               <div className="space-y-4">
                 <Badge variant="secondary" className="w-fit">
-                  SASU Milgram AI Solutions
+                  Milgram AI Solutions
                 </Badge>
                 <h1 className="font-heading text-4xl lg:text-6xl font-bold text-balance">
                   Expert en <span className="text-primary">Automatisation Intelligente</span>
                 </h1>
                 <p className="text-xl text-muted-foreground text-pretty">
-                  Plus de 30 ans d'expérience dans l'IA, le BPM, la RPA et l'automatisation des processus métiers. Je
-                  vous accompagne dans vos défis d'automatisation intelligente.
+                  Plus de 30 ans d'expérience dans l'IA, le BPM, la RPA et l'automatisation des processus métiers. <br />
+                  Je vous accompagne dans vos défis d'automatisation intelligente.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="w-fit">
-                  Découvrir mes services
-                </Button>
                 <Button variant="outline" size="lg" className="w-fit bg-transparent" asChild>
                   <a href="https://www.linkedin.com/in/milgram/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="mr-2 h-4 w-4" />
@@ -60,11 +57,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8 flex items-center justify-center">
+              <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 p-8 flex items-start justify-center lg:col-span-1">
                 <img
                   src="/joel.milgram.jpeg"
                   alt="Portrait professionnel"
-                  className="rounded-xl shadow-2xl w-full h-full object-cover"
+                  className="rounded-xl shadow-2xl w-full h-full object-cover object-top"
                 />
               </div>
             </div>
@@ -79,7 +76,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <h2 className="font-heading text-3xl lg:text-4xl font-bold">Mon approche</h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                J'accompagne et conseille mes clients dans leurs défis d'AUTOMATISATION INTELLIGENTE, quel que soit leur
+                J'accompagne et conseille mes clients dans leurs défis d'<b>AUTOMATISATION INTELLIGENTE</b>, quel que soit leur
                 secteur d'activité. Curieux de nature et ouvert aux autres, je suis constamment à l'affût de projets
                 ambitieux et de rencontres enrichissantes.
               </p>
@@ -190,8 +187,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Recherche et développement en IA appliquée aux systèmes énergétiques et à l'optimisation des
-                    processus industriels.
+                    Recherche et développement en IA appliquée au diagnostic des pannes de capteurs dans les centrales nucléaires. Génération automatique de code et raisonnement à base de modèles.
                   </p>
                 </CardContent>
               </Card>
@@ -202,8 +198,8 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Développement, chefferie de projet, avant-vente, marketing et business development. Expérience
-                    internationale en France et à l'étranger, auprès d'utilisateurs finaux et de partenaires.
+                    Développement, chefferie de projet, avant-vente, marketing, business development et expertise. Expérience
+                    internationale auprès de clients et de partenaires.
                   </p>
                 </CardContent>
               </Card>
@@ -225,7 +221,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="mailto:contact@milgram.fr">
+                <a href="mailto:joel@milgram.fr">
                   <Mail className="mr-2 h-4 w-4" />
                   Me contacter
                 </a>
@@ -260,7 +256,7 @@ export default function HomePage() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:contact@milgram.fr"
+                href="mailto:joel@milgram.fr"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
